@@ -1,6 +1,6 @@
 // server.js
 const express = require('express');
-const connectDB = require('./config/db');
+const connectDB = require('../config/db');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
     res.send('API running');
 })
 // Use routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/students', require('./routes/student'));
-app.use('/api/attendance', require('./routes/attendance'));
+app.use('/api/auth', require('../routes/auth'));
+app.use('/api/students', require('../routes/student'));
+app.use('/api/attendance', require('../routes/attendance'));
 
 const PORT = process.env.PORT || 5000;
 

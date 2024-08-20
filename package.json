@@ -1,10 +1,9 @@
 {
   "name": "student-attendance-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "nodemon server.js"
-  },
+    "start": "node api/index.js"  },
   "keywords": [],
   "author": "",
   "license": "ISC",

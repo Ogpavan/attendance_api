@@ -14,8 +14,11 @@ const app = express();
 // Enable CORS for all origins
 app.use(cors({
   origin: '*', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow these methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
   credentials: true, // Allow credentials if needed
+  preflightContinue: false,
+  optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
 // Middleware to parse JSON

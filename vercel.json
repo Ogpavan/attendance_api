@@ -18,8 +18,12 @@
       "dest": "api/index.js"
     },
     {
+      "src": "/(login|register)",
+      "dest": "/index.html"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html"
     }
   ]
 }
